@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="physics">
@@ -30,24 +30,6 @@
     </Filter>
     <Filter Include="math">
       <UniqueIdentifier>{a565f213-2d13-4d2d-a3a0-5b2d06cbd05f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="external">
-      <UniqueIdentifier>{ec174f10-2de3-4568-9f30-b2f0a4e9396e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="external\tinyxml2">
-      <UniqueIdentifier>{364c3b8c-77eb-46ed-a866-a8686b1b65bc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="external\unzip">
-      <UniqueIdentifier>{589928bf-e550-41f1-ae21-64443dd5fe21}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="external\edtaa">
-      <UniqueIdentifier>{1849ae10-8a10-4784-bbad-66fa67a1ed04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="external\ConvertUTF">
-      <UniqueIdentifier>{6c1e4a6b-c168-436b-aa63-0af7f4caebf9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="external\xxhash">
-      <UniqueIdentifier>{b4e2b1e5-2d79-44a3-af45-728d47b7bdb2}</UniqueIdentifier>
     </Filter>
     <Filter Include="storage">
       <UniqueIdentifier>{44bdf58f-4af2-433c-b4af-58dc05ef96b5}</UniqueIdentifier>
@@ -211,9 +193,6 @@
     <Filter Include="cocostudio\TimelineAction\trigger">
       <UniqueIdentifier>{0554a5b1-03a1-4d38-87a5-976dbe9a39d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="cocostudio\json\flatbuffers">
-      <UniqueIdentifier>{db915acb-1838-413d-b290-dc280365eabc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cocostudio\reader\WidgetReader\ComAudioReader">
       <UniqueIdentifier>{b71e98df-9863-4ee5-9818-04fad2ef8da1}</UniqueIdentifier>
     </Filter>
@@ -238,21 +217,6 @@
     <Filter Include="base\allocator">
       <UniqueIdentifier>{92ff4e66-3943-47da-a439-c8f182bb871a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="extension\Particle3D">
-      <UniqueIdentifier>{f646bed2-5709-4436-82a4-b553ff7cd85c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\Particle3D\ParticleUniverse">
-      <UniqueIdentifier>{ed9d0632-d777-44fe-b754-29d08f3b0572}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\Particle3D\ParticleUniverse\ParticleAffectors">
-      <UniqueIdentifier>{66eb7ea7-a018-4a78-8d43-dfe0e1e2c2df}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\Particle3D\ParticleUniverse\ParticleEmitters">
-      <UniqueIdentifier>{55ba4137-2e9f-42bd-8303-840ce04cd2af}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\Particle3D\ParticleUniverse\ParticleRenders">
-      <UniqueIdentifier>{d319cd5d-45e3-4e13-8de3-dbf5ea7db3f7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cocostudio\reader\WidgetReader\ArmatureNodeReader">
       <UniqueIdentifier>{e1848cce-b225-42c4-bb6e-6430b6da123b}</UniqueIdentifier>
     </Filter>
@@ -276,9 +240,6 @@
     <ClCompile Include="..\physics\CCPhysicsWorld.cpp">
       <Filter>physics</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\external\xxhash\xxhash.c">
-      <Filter>external\xxhash</Filter>
-    </ClCompile>
     <ClCompile Include="..\deprecated\CCArray.cpp">
       <Filter>deprecated</Filter>
     </ClCompile>
@@ -298,12 +259,6 @@
       <Filter>deprecated</Filter>
     </ClCompile>
     <ClCompile Include="..\cocos2d.cpp" />
-    <ClCompile Include="..\..\external\ConvertUTF\ConvertUTF.c">
-      <Filter>external\ConvertUTF</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp">
-      <Filter>external\ConvertUTF</Filter>
-    </ClCompile>
     <ClCompile Include="CCAction.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -708,21 +663,6 @@
     </ClCompile>
     <ClCompile Include="..\platform\CCThread.cpp">
       <Filter>platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\tinyxml2\tinyxml2.cpp">
-      <Filter>external\tinyxml2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\unzip\ioapi_mem.cpp">
-      <Filter>external\unzip</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\unzip\ioapi.cpp">
-      <Filter>external\unzip</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\unzip\unzip.cpp">
-      <Filter>external\unzip</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\edtaa3func\edtaa3func.cpp">
-      <Filter>external\edtaa</Filter>
     </ClCompile>
     <ClCompile Include="..\base\CCIMEDispatcher.cpp">
       <Filter>base</Filter>
@@ -1232,27 +1172,6 @@
     <ClCompile Include="CCLight.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\flatc.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\idl_gen_cpp.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\idl_gen_fbs.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\idl_gen_general.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\idl_gen_go.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\idl_gen_text.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\external\flatbuffers\idl_parser.cpp">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClCompile>
     <ClCompile Include="..\editor-support\cocostudio\FlatBuffersSerialize.cpp">
       <Filter>cocostudio\json</Filter>
     </ClCompile>
@@ -1301,303 +1220,6 @@
     <ClCompile Include="..\base\allocator\CCAllocatorGlobalNewDelete.cpp">
       <Filter>base\allocator</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\CCParticle3DAffector.cpp">
-      <Filter>extension\Particle3D</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\CCParticle3DEmitter.cpp">
-      <Filter>extension\Particle3D</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\CCParticleSystem3D.cpp">
-      <Filter>extension\Particle3D</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\CCParticle3DRender.cpp">
-      <Filter>extension\Particle3D</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DDynamicAttribute.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DForceField.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DNoise.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DPlane.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DSimpleSpline.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticleSystem3D.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DBoxEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DCircleEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DLineEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DMeshSurfaceEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPointEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPositionEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSlaveEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSphereSurfaceEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DVertexEmitter.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAlignAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseCollider.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseForceAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBoxCollider.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DCollisionAvoidanceAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DColorAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DFlockCenteringAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DForceFieldAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGeometryRotator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGravityAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DInterParticleCollider.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DJetAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLineAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLinearForceAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DParticleFollower.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPathFollower.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPlaneCollider.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DRandomiser.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleVelocityAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSineForceAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSphereCollider.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureAnimator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureRotator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVelocityMatchingAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVortexAffector.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DSphere.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptCompiler.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptLexer.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptParser.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DTranslateManager.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticleSystem3DTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DTechniqueTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DRendererTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DDynamicAttributeTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DBoxEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DCircleEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DLineEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DMeshSurfaceEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPointEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPositionEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSlaveEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSphereSurfaceEmitterTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DEmitterManager.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAlignAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseColliderTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseForceAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBoxColliderTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DCollisionAvoidanceAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DColorAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DFlockCenteringAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DForceFieldAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGeometryRotatorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGravityAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DInterParticleColliderTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DJetAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLineAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLinearForceAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DParticleFollowerTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPathFollowerTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPlaneColliderTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DRandomiserTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSineForceAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSphereColliderTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureAnimatorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureRotatorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVelocityMatchingAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVortexAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAffectorManager.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleVelocityAffectorTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DMaterialTranslator.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DMaterialManager.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DUtil.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleRenders\CCPUParticle3DRender.cpp">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleRenders</Filter>
-    </ClCompile>
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\ArmatureNodeReader\ArmatureNodeReader.cpp">
       <Filter>cocostudio\reader\WidgetReader\ArmatureNodeReader</Filter>
     </ClCompile>
@@ -1608,6 +1230,12 @@
     <ClCompile Include="..\3d\CCPlane.cpp" />
     <ClCompile Include="..\3d\CCAABB.cpp">
       <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\renderer\CCScissorCommand.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\renderer\CCStencilCommand.cpp">
+      <Filter>renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1625,9 +1253,6 @@
     </ClInclude>
     <ClInclude Include="..\physics\CCPhysicsWorld.h">
       <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\xxhash\xxhash.h">
-      <Filter>external\xxhash</Filter>
     </ClInclude>
     <ClInclude Include="..\deprecated\CCArray.h">
       <Filter>deprecated</Filter>
@@ -1660,9 +1285,6 @@
       <Filter>deprecated</Filter>
     </ClInclude>
     <ClInclude Include="..\cocos2d.h" />
-    <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h">
-      <Filter>external\ConvertUTF</Filter>
-    </ClInclude>
     <ClInclude Include="CCAction.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -2118,21 +1740,6 @@
     </ClInclude>
     <ClInclude Include="..\platform\CCThread.h">
       <Filter>platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\tinyxml2\tinyxml2.h">
-      <Filter>external\tinyxml2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\unzip\unzip.h">
-      <Filter>external\unzip</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\unzip\ioapi.h">
-      <Filter>external\unzip</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\unzip\ioapi_mem.h">
-      <Filter>external\unzip</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\edtaa3func\edtaa3func.h">
-      <Filter>external\edtaa</Filter>
     </ClInclude>
     <ClInclude Include="..\base\CCIMEDelegate.h">
       <Filter>base</Filter>
@@ -2747,15 +2354,6 @@
     <ClInclude Include="CCLight.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\external\flatbuffers\flatbuffers.h">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\flatbuffers\idl.h">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\flatbuffers\util.h">
-      <Filter>cocostudio\json\flatbuffers</Filter>
-    </ClInclude>
     <ClInclude Include="..\editor-support\cocostudio\CSParseBinary_generated.h">
       <Filter>cocostudio\json</Filter>
     </ClInclude>
@@ -2825,303 +2423,6 @@
     <ClInclude Include="..\base\allocator\CCAllocatorStrategyPool.h">
       <Filter>base\allocator</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\CCParticle3DAffector.h">
-      <Filter>extension\Particle3D</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\CCParticle3DEmitter.h">
-      <Filter>extension\Particle3D</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\CCParticleSystem3D.h">
-      <Filter>extension\Particle3D</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\CCParticle3DRender.h">
-      <Filter>extension\Particle3D</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DDynamicAttribute.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DForceField.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DNoise.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DPlane.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DSimpleSpline.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DSphere.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticleSystem3D.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DBoxEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DCircleEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DLineEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DMeshSurfaceEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPointEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPositionEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSlaveEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSphereSurfaceEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DVertexEmitter.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAlignAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseCollider.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseForceAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBoxCollider.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DCollisionAvoidanceAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DColorAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DFlockCenteringAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DForceFieldAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGeometryRotator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGravityAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DInterParticleCollider.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DJetAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLineAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLinearForceAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DParticleFollower.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPathFollower.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPlaneCollider.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DRandomiser.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleVelocityAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSineForceAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSphereCollider.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureAnimator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureRotator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVelocityMatchingAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVortexAffector.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptCompiler.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptLexer.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptParser.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DScriptTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DTranslateManager.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticleSystem3DTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DTechniqueTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DRendererTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DDynamicAttributeTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DBoxEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DCircleEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DLineEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DMeshSurfaceEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPointEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DPositionEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSlaveEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DSphereSurfaceEmitterTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleEmitters\CCPUParticle3DEmitterManager.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleEmitters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAlignAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseColliderTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBaseForceAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DBoxColliderTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DCollisionAvoidanceAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DColorAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DFlockCenteringAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DForceFieldAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGeometryRotatorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DGravityAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DInterParticleColliderTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DJetAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLineAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DLinearForceAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DParticleFollowerTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPathFollowerTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DPlaneColliderTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DRandomiserTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSineForceAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DSphereColliderTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureAnimatorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DTextureRotatorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVelocityMatchingAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DVortexAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DAffectorManager.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleAffectors\CCPUParticle3DScaleVelocityAffectorTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleAffectors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DMaterialTranslator.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DMaterialManager.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\CCPUParticle3DUtil.h">
-      <Filter>extension\Particle3D\ParticleUniverse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\Particle3D\ParticleUniverse\ParticleRenders\CCPUParticle3DRender.h">
-      <Filter>extension\Particle3D\ParticleUniverse\ParticleRenders</Filter>
-    </ClInclude>
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\ArmatureNodeReader\ArmatureNodeReader.h">
       <Filter>cocostudio\reader\WidgetReader\ArmatureNodeReader</Filter>
     </ClInclude>
@@ -3141,6 +2442,12 @@
     </ClInclude>
     <ClInclude Include="..\platform\CCPlatformMacros.h">
       <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\renderer\CCScissorCommand.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\renderer\CCStencilCommand.h">
+      <Filter>renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

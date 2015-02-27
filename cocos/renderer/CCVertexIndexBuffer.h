@@ -29,10 +29,6 @@
 #include "base/ccMacros.h"
 #include "base/CCRef.h"
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_EMSCRIPTEN)
-    #define SUPPORT_NO_CLIENT_SIDE_ARRAYS
-#endif
-
 NS_CC_BEGIN
 
 class EventListenerCustom;
@@ -70,7 +66,12 @@ public:
     };
     
     virtual ~GLArrayBuffer();
-    
+
+    // @brief sets all the elements of the client and native buffer.
+    //        element count is updated to reflect the new count.
+    //        if defer is true, then the native buffer will not be updated.
+    void setElements(const void* elements, size_t count, bool defer = true);
+
     // @brief updates a region of the client and native buffer
     //        if defer is true, then the native buffer will not be updated.
     void updateElements(const void* elements, size_t count, size_t begin = 0, bool defer = true);
@@ -114,7 +115,7 @@ public:
         return getCapacity() * getElementSize();
     }
     
-    CC_DEPRECATED_ATTRIBUTE uint32_t getVBO() const
+    CC_DEPRECATED(v3) uint32_t getVBO() const
     {
         return _vbo;
     }
@@ -169,15 +170,22 @@ public:
     void recreate() const;
     
     // @brief returns the client array if present, otherwise nullptr
-    template <typename T = void>
-    T* getElementsT() const
+    template <typename T>
+    T* getElementsOfType() const
     {
         return hasClient() ? static_cast<T*>(_elements) : nullptr;
     }
 
-    // @brief append
     template <typename T>
-    size_t appendElementsT(T* source, size_t elements = 1, bool defer = true)
+    void setElementsOfType(const T* element, size_t count, bool defer = true)
+    {
+        CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
+        auto mult = sizeof(T) / getElementSize();
+        setElements((const void*)element, mult * count, defer);
+    }
+
+    template <typename T>
+    size_t appendElementsOfType(T* source, size_t elements = 1, bool defer = true)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -186,7 +194,7 @@ public:
     }
     
     template <typename T>
-    void updateElementsT(const T* element, size_t count, size_t begin, bool defer = true)
+    void updateElementsOfType(const T* element, size_t count, size_t begin, bool defer = true)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -194,7 +202,7 @@ public:
     }
     
     template <typename T>
-    void insertElementsT(const T* element, size_t count, size_t begin, bool defer = true)
+    void insertElementsOfType(const T* element, size_t count, size_t begin, bool defer = true)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -202,7 +210,7 @@ public:
     }
     
     template <typename T>
-    void removeElementsT(size_t count, size_t begin, bool defer = true)
+    void removeElementsOfType(size_t count, size_t begin, bool defer = true)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -210,7 +218,7 @@ public:
     }
     
     template <typename T>
-    void addCapacityT(size_t count, bool zero = false)
+    void addCapacityOfType(size_t count, bool zero = false)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -218,7 +226,7 @@ public:
     }
     
     template <typename T>
-    void swapElementsT(size_t source, size_t dest, size_t count)
+    void swapElementsOfType(size_t source, size_t dest, size_t count)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -226,7 +234,7 @@ public:
     }
 
     template <typename T>
-    void moveElementsT(size_t source, size_t dest, size_t count)
+    void moveElementsOfType(size_t source, size_t dest, size_t count)
     {
         CCASSERT(0 == sizeof(T) % getElementSize(), "elements must divide evenly into elementSize");
         auto mult = sizeof(T) / getElementSize();
@@ -283,9 +291,9 @@ public:
         return nullptr;
     }
     
-    CC_DEPRECATED_ATTRIBUTE int getSizePerVertex() const { return (int)getElementSize(); }
-    CC_DEPRECATED_ATTRIBUTE int getVertexNumber() const { return (int)getElementCount(); }
-    CC_DEPRECATED_ATTRIBUTE bool updateVertices(const void* vertices, int count, int begin) { updateElements(vertices, count, begin); return true; }
+    CC_DEPRECATED(v3) int getSizePerVertex() const { return (int)getElementSize(); }
+    CC_DEPRECATED(v3) int getVertexNumber() const { return (int)getElementCount(); }
+    CC_DEPRECATED(v3) bool updateVertices(const void* vertices, int count, int begin) { updateElements(vertices, count, begin); return true; }
 
 protected:
     
@@ -322,9 +330,9 @@ public:
         return _type;
     }
     
-    CC_DEPRECATED_ATTRIBUTE int getSizePerIndex() const { return (int)getElementSize(); }
-    CC_DEPRECATED_ATTRIBUTE int getIndexNumber() const { return (int)getElementCount(); }
-    CC_DEPRECATED_ATTRIBUTE bool updateIndices(const void* indices, int count, int begin) { updateElements(indices, count, begin); return true; }
+    CC_DEPRECATED(v3) int getSizePerIndex() const { return (int)getElementSize(); }
+    CC_DEPRECATED(v3) int getIndexNumber() const { return (int)getElementCount(); }
+    CC_DEPRECATED(v3) bool updateIndices(const void* indices, int count, int begin) { updateElements(indices, count, begin); return true; }
 
 protected:
     

@@ -300,12 +300,6 @@ void Director::drawScene()
         _runningScene->render(_renderer);
         
         _eventDispatcher->dispatchEvent(_eventAfterVisit);
-#if CC_USE_PHYSICS
-        if(physicsWorld)
-        {
-            physicsWorld->_updateBodyTransform = false;
-        }
-#endif
     }
 
     // draw the notifications node
@@ -419,11 +413,7 @@ TextureCache* Director::getTextureCache() const
 
 void Director::initTextureCache()
 {
-#ifdef EMSCRIPTEN
-    _textureCache = new (std::nothrow) TextureCacheEmscripten();
-#else
     _textureCache = new (std::nothrow) TextureCache();
-#endif // EMSCRIPTEN
 }
 
 void Director::destroyTextureCache()

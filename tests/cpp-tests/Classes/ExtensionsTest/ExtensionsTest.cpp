@@ -3,11 +3,8 @@
 #include "AssetsManagerExTest/AssetsManagerExTest.h"
 #include "ControlExtensionTest/CCControlSceneManager.h"
 #include "CocosBuilderTest/CocosBuilderTest.h"
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_EMSCRIPTEN) && (CC_TARGET_PLATFORM != CC_PLATFORM_NACL)
-#include "NetworkTest/HttpClientTest.h"
-#endif
 #include "TableViewTest/TableViewTestScene.h"
-
+#include "NetworkTest/HttpClientTest.h"
 #include "CocoStudioArmatureTest/ArmatureScene.h"
 #include "CocoStudioActionTimelineTest/ActionTimelineTestScene.h"
 #include "CocoStudioComponentsTest/ComponentsTestScene.h"
@@ -46,10 +43,8 @@ static struct {
 			scene->release();
 		}
 	}},
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_EMSCRIPTEN) && (CC_TARGET_PLATFORM != CC_PLATFORM_NACL)
-	{ "HttpClientTest", [](Ref *sender){ runHttpClientTest();}
-	},
-#endif
+    { "HttpClientTest", [](Ref *sender){ runHttpClientTest();}
+    },
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
 	{ "WebSocketTest", [](Ref *sender){ runWebSocketTest();}
 	},
