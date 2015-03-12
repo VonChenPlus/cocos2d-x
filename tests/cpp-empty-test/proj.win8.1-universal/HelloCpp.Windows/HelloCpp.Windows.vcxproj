@@ -114,6 +114,7 @@
     <PackageCertificateKeyFile>HelloCpp.Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>4527A01C0E59CE79420511D7528FA7648E753229</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LibraryPath>$(LibraryPath)</LibraryPath>
@@ -298,9 +299,6 @@ xcopy "$(EngineRoot)cocos\platform\win8.1-universal\pch.h" "$(EngineRoot)templat
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\cocos\2d\libcocos2d_8_1\libcocos2d_8_1\libcocos2d_8_1.Windows\libcocos2d_8_1.Windows.vcxproj">
       <Project>{9335005f-678e-4e8e-9b84-50037216aec8}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\cocos\editor-support\spine\proj.win8.1-universal\libSpine.Windows\libSpine.Windows.vcxproj">
-      <Project>{f3550fe0-c795-44f6-8feb-093eb68143ae}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

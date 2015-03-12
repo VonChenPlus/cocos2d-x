@@ -78,8 +78,8 @@
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>../../Classes;$(EngineRoot)cocos\platform\win8.1-universal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/Zm200 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</ForcedIncludeFiles>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</ForcedIncludeFiles>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -102,8 +102,8 @@
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>../../Classes;$(EngineRoot)cocos\platform\win8.1-universal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/Zm200 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">pch.h</ForcedIncludeFiles>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -149,9 +149,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\cocos\2d\libcocos2d_8_1\libcocos2d_8_1\libcocos2d_8_1.WindowsPhone\libcocos2d_8_1.WindowsPhone.vcxproj">
       <Project>{22f3b9df-1209-4574-8331-003966f562bf}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\cocos\editor-support\spine\proj.win8.1-universal\libSpine.WindowsPhone\libSpine.WindowsPhone.vcxproj">
-      <Project>{cc1da216-a80d-4be4-b309-acb6af313aff}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
