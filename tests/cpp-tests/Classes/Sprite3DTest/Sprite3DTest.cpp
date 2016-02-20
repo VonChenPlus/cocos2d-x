@@ -162,7 +162,7 @@ Sprite3DForceDepthTest::Sprite3DForceDepthTest()
 {
     auto orc = Sprite3D::create("Sprite3DTest/orc.c3b");
     orc->setScale(5);
-    orc->setNormalizedPosition(Vec2(.5,.3));
+    orc->setNormalizedPosition(Vec2(.5f,.3f));
     orc->setPositionZ(40);
     orc->setRotation3D(Vec3(0,180,0));
     orc->setGlobalZOrder(-1);
@@ -1533,7 +1533,7 @@ void Animate3DTest::addSprite3D()
         _state = State::SWIMMING;
     }
     
-    _moveAction = MoveTo::create(4.f, Vec2(s.width / 5.f, s.height / 2.f));
+    _moveAction = MoveBy::create(4.f, Vec2( - s.width * 3.0f /5, 0));
     _moveAction->retain();
     auto seq = Sequence::create(_moveAction, CallFunc::create(CC_CALLBACK_0(Animate3DTest::reachEndCallBack, this)), nullptr);
     seq->setTag(100);
@@ -1543,10 +1543,11 @@ void Animate3DTest::addSprite3D()
 void Animate3DTest::reachEndCallBack()
 {
     _sprite->stopActionByTag(100);
-    auto inverse = (MoveTo*)_moveAction->reverse();
-    inverse->retain();
+    auto inverse = _moveAction->reverse();
     _moveAction->release();
     _moveAction = inverse;
+    _moveAction->retain();
+
     auto rot = RotateBy::create(1.f, Vec3(0.f, 180.f, 0.f));
     auto seq = Sequence::create(rot, _moveAction, CallFunc::create(CC_CALLBACK_0(Animate3DTest::reachEndCallBack, this)), nullptr);
     seq->setTag(100);
@@ -1924,7 +1925,7 @@ void Sprite3DWithOBBPerformanceTest::addNewSpriteWithCoords(Vec2 p)
         sprite->runAction(RepeatForever::create(animate));
     }
     
-    _moveAction = MoveTo::create(4.f, Vec2(s.width / 5.f, s.height / 2.f));
+    _moveAction = MoveBy::create(4.f, Vec2(-s.width * 3 / 5.f, 0));
     _moveAction->retain();
     auto seq = Sequence::create(_moveAction, CallFunc::create(CC_CALLBACK_0(Sprite3DWithOBBPerformanceTest::reachEndCallBack, this)), nullptr);
     seq->setTag(100);
@@ -1940,10 +1941,11 @@ void Sprite3DWithOBBPerformanceTest::addNewSpriteWithCoords(Vec2 p)
 void Sprite3DWithOBBPerformanceTest::reachEndCallBack()
 {
     _sprite->stopActionByTag(100);
-    auto inverse = (MoveTo*)_moveAction->reverse();
-    inverse->retain();
+    auto inverse = _moveAction->reverse();
     _moveAction->release();
     _moveAction = inverse;
+    _moveAction->retain();
+    
     auto rot = RotateBy::create(1.0f, Vec3(0.f, 180.f, 0.f));
     auto seq = Sequence::create(rot, _moveAction, CallFunc::create(CC_CALLBACK_0(Sprite3DWithOBBPerformanceTest::reachEndCallBack, this)), nullptr);
     seq->setTag(100);
@@ -2128,7 +2130,7 @@ void QuaternionTest::addNewSpriteWithCoords(Vec2 p)
 void QuaternionTest::update(float delta)
 {
     _accAngle += delta * _arcSpeed;
-    const float pi = M_PI;
+    const float pi = (float)M_PI;
     if (_accAngle >= 2 * pi)
         _accAngle -= 2 * pi;
     
